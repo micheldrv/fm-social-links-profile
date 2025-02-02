@@ -1,0 +1,147 @@
+@font-face {
+  font-family: Inter;
+  src: url("assets/fonts/Inter-VariableFont_slnt\,wght.ttf");
+}
+
+:root {
+  --green: hsl(75, 94%, 57%);
+  --white: hsl(0, 0%, 100%);
+  --grey-300: hsl(0, 0%, 88%);
+  --grey-700: hsl(0, 0%, 20%);
+  --grey-800: hsl(0, 0%, 12%);
+  --grey-900: hsl(0, 0%, 8%);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--grey-900);
+  color: var(--white);
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+}
+
+.card {
+  box-sizing: border-box;
+  max-width: 384px;
+  width: calc(100% - 48px);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  text-align: center;
+  background-color: var(--grey-800);
+  padding: 40px;
+  margin: 24px;
+  border-radius: 10px;
+}
+
+.profile_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.profile_img {
+  border-radius: 50%;
+  width: 88px;
+}
+
+.name_div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.name {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.7em;
+}
+
+.location {
+  margin: 0;
+  color: var(--green);
+  font-weight: 400;
+  text-shadow: 0 0 2px var(--green);
+}
+
+.bio {
+  margin: 0;
+  font-weight: 400;
+  color: var(--grey-300);
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.buttons button {
+  background-color: var(--grey-700);
+  color: var(--white);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  height: 45px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.buttons button:hover {
+  background-color: var(--green);
+  color: var(--grey-700);
+}
+
+.buttons button:focus {
+  outline: 2px solid var(--green);
+}
+
+.attribution {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 11px;
+  color: var(--white);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 5px;
+}
+
+.info a {
+  color: var(--green);
+}
+
+@media (max-width: 640px) {
+  .attribution {
+    position: unset;
+    gap: 5px;
+    margin-bottom: 24px;
+  }
+
+  .info {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 432px) {
+  .card {
+    padding: 24px;
+  }
+}
